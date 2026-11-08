@@ -1,6 +1,8 @@
-# 🔥 Inferno Wings
+# Inferno Wings
 
-A one-button 3D arcade flyer. You are a phoenix tearing through a volcanic hellscape full of obsidian spires, fire-spitting dragons and ancient boss wyrms, with explosions, slow-mo, bloom and a synthesized metal soundtrack. Solo, or couch co-op with a friend on the same keyboard or the same phone.
+<img src="icon.png" width="100" height="100">
+
+A one-button 3D arcade flyer. You are a phoenix tearing through a volcanic hellscape full of obsidian spires, fire-spitting dragons and ancient boss wyrms, with explosions, slow-mo, bloom and a synthesized metal soundtrack. Solo, or co-op with a friend on the same keyboard or the same phone.
 
 Built with [three.js](https://threejs.org/). Every sound and every note of music is generated live with the Web Audio API, so there are no audio files at all.
 
