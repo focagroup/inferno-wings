@@ -1,0 +1,73 @@
+{
+  "name": "inferno-wings",
+  "productName": "Inferno Wings",
+  "version": "1.0.0",
+  "description": "A one-button 3D arcade flyer: a phoenix, dragons, boss wyrms and lots of fire.",
+  "author": "Inferno Wings",
+  "license": "SEE LICENSE IN ../LICENSE",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --linux AppImage --x64 --arm64 && electron-builder --win nsis portable --x64"
+  },
+  "build": {
+    "appId": "com.infernowings.game",
+    "productName": "Inferno Wings",
+    "copyright": "Inferno Wings",
+    "directories": {
+      "output": "out",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "icon.png",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../game",
+        "to": "game"
+      }
+    ],
+    "electronLanguages": [
+      "en-US"
+    ],
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "icon": "build/icon.png",
+      "category": "Game",
+      "synopsis": "One-button 3D arcade flyer",
+      "artifactName": "inferno-wings-linux-${arch}.AppImage",
+      "syncDesktopName": true,
+      "executableName": "inferno-wings"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Inferno Wings",
+      "artifactName": "inferno-wings-windows-setup.exe"
+    },
+    "portable": {
+      "artifactName": "inferno-wings-windows-portable.exe"
+    },
+    "compression": "maximum"
+  },
+  "devDependencies": {
+    "electron": "45.2.3",
+    "electron-builder": "26.18.0"
+  },
+  "desktopName": "inferno-wings.desktop"
+}

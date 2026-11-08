@@ -1,0 +1,12 @@
+# build output (published as GitHub release assets instead)
+/dist/
+android/build/
+electron/node_modules/
+electron/out/
+electron/build.log
+
+# Android signing key: keep it safe, but never commit it
+android/*.keystore
+
+# local tooling
+.claude/
